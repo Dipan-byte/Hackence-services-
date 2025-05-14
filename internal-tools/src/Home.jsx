@@ -7,8 +7,13 @@ function Home(){
             <div className='header'>
                     <p>HACKENESE SERVICES</p>
             </div>
-            <div>
-                    <InvoiceCard />
+            <div className='card-wrapper'>
+                    <>
+                        <InvoiceCard />
+                        <InvoiceCard />
+                    
+                    </>
+                    
             </div>
             <div></div>
         </div>

@@ -1,4 +1,14 @@
 .body-wrapper{
  height: 100%;
  width:100%;
+
+}
+.header{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid rgb(238, 233, 233) ;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(237, 238, 239, 0.43);
 }

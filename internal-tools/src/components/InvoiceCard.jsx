@@ -1,6 +1,10 @@
+import './components.css'
 function InvoiceCard(){
     return(
-       <p>hi</p>
+       <div className="card-container">
+            <img src="src/assets/invoice.png" alt="wait!" />
+            <p>hi</p>
+       </div>
     )
 }
 export default InvoiceCard

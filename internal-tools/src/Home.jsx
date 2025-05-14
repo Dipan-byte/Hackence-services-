@@ -1,6 +1,15 @@
 import './Home.css'
-import InvoiceCard from './components/InvoiceCard'
+import InvoiceCard from './components/InvoiceCard.jsx'
+import Invoiceform from './components/Invoiceform.jsx'
+import React ,{useState} from 'react'
 function Home(){
+    
+    const [showForm , setShowForm] = useState(false);
+        function handleShowForm(){
+            setShowForm(true);
+            console.log(showForm)
+
+            };
     return(
         <>
         <div className='body-wrapper'>
@@ -8,11 +17,19 @@ function Home(){
                     <p>HACKENESE SERVICES</p>
             </div>
             <div className='card-wrapper'>
-                    <>
-                        <InvoiceCard />
-                        <InvoiceCard />
+            
+            
                     
-                    </>
+                <InvoiceCard onCardClick={handleShowForm} />
+                {showForm && <div className='positioning-container'> 
+                    <Invoiceform />
+                    </div>}
+                
+
+                        
+                    
+
+                    
                     
             </div>
             <div></div>

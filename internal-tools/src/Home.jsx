@@ -8,8 +8,10 @@ function Home(){
         function handleShowForm(){
             setShowForm(true);
             console.log(showForm)
-
-            };
+             };
+        function handleHideForm(){
+            setShowForm(false);
+        }
     return(
         <>
         <div className='body-wrapper'>
@@ -22,14 +24,8 @@ function Home(){
                     
                 <InvoiceCard onCardClick={handleShowForm} />
                 {showForm && <div className='positioning-container'> 
-                    <Invoiceform />
+                    <Invoiceform onBackClick={handleHideForm} />
                     </div>}
-                
-
-                        
-                    
-
-                    
                     
             </div>
             <div></div>

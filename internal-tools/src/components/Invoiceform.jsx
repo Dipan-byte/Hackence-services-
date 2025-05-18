@@ -63,19 +63,7 @@ function Invoiceform({onBackClick}){
                         <label className='form-lable'> VALID UNTIL: </label> 
                         <input type='date' className='form-input' value={validuntil}  onChange={handlevaliduntil} />
                     </div>
-                    <div className='form-group'>
-                        <label className='form-lable'>ITEM: </label> 
-                        <input className='form-input' type='text' placeholder='ENTER ITEM' value={item}  onChange={handleitem} />
-                    </div>
-                    <div className='form-group'>
-                        <label className='form-lable'>QUANTITY:</label> 
-                        <input type='number' className='form-input' placeholder='ENTER QUANTITY' value={quantity}  onChange={handlequantity} />
-                    </div>
-
-                    <div className='form-group'>
-                            <label className='form-lable' >COST:</label> 
-                            <input type='number' className='form-input' placeholder='ENTER COST' value={cost}  onChange={handlecost} />
-                    </div>
+                    
 
                     <div className='form-group'>
                         <label className='form-lable'>NAME OF THE INSTITUTION: </label> 
@@ -93,9 +81,22 @@ function Invoiceform({onBackClick}){
                             <label className='form-lable'>ADDRESS:</label> 
                             <input type="textarea" className='form-input' placeholder='ENTER ADDRESS' value={address} onChange={handleaddress} />
                         </div>               
-                
+                    <div className='form-group'>
+                            <label className='form-lable'>ITEM: </label> 
+                            <input className='form-input' type='text' placeholder='ENTER ITEM' value={item}  onChange={handleitem} />
+                        </div>
+                        <div className='form-group'>
+                            <label className='form-lable'>QUANTITY:</label> 
+                            <input type='number' className='form-input' placeholder='ENTER QUANTITY' value={quantity}  onChange={handlequantity} />
+                        </div>
+
+                        <div className='form-group'>
+                                <label className='form-lable' >COST:</label> 
+                                <input type='number' className='form-input' placeholder='ENTER COST' value={cost}  onChange={handlecost} />
+                        </div>
             </div>
             <div className='form-button-container'>
+                <button>ADD ITEM &#8594;</button>
                 <button onClick={onBackClick}>BACK &#8617;</button>
                 <button>SUBMIT</button>
                 

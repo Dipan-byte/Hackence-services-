@@ -18,14 +18,11 @@ function Home(){
             <div className='header'>
                     <p>HACKENESE SERVICES</p>
             </div>
-            <div className='card-wrapper'>
-            
-            
-                    
+            <div className='card-wrapper'>   
                 <InvoiceCard onCardClick={handleShowForm} />
                 {showForm && <div className='positioning-container'> 
                     <Invoiceform onBackClick={handleHideForm} />
-                    </div>}
+            </div>}
                     
             </div>
             <div></div>

@@ -89,6 +89,9 @@
     display: flex;
     justify-content: flex-end;
 }
+.item-list-container{
+    background-color: white;
+}
 
 .invoice-image{
     

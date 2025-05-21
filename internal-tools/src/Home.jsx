@@ -1,4 +1,5 @@
 import './Home.css'
+import AddedItems from './components/AddedItems.jsx';
 import InvoiceCard from './components/InvoiceCard.jsx'
 import Invoiceform from './components/Invoiceform.jsx'
 import React ,{useState} from 'react'
@@ -9,7 +10,7 @@ function Home(){
             setShowForm(true);
             console.log(showForm)
              };
-        function handleHideForm(){
+        function handleHideForm(){ 
             setShowForm(false);
         }
     return(
@@ -22,6 +23,7 @@ function Home(){
                 <InvoiceCard onCardClick={handleShowForm} />
                 {showForm && <div className='positioning-container'> 
                     <Invoiceform onBackClick={handleHideForm} />
+                    <AddedItems />
             </div>}
                     
             </div>

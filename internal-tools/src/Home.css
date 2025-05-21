@@ -29,7 +29,7 @@
     width: 100vw;
     height: 100vh;
     display: flex;        
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;     
     background-color: rgba(0, 0, 0, 0.504); 
     z-index: 999;

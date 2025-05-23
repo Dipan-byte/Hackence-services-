@@ -118,10 +118,12 @@
     height: 30px;
     font-size: 15px;
 }
-.item-list-content-2{
+.item-list-row{
     display: flex;
     font-family: Arial,  sans-serif;
     font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
     color: rgb(92, 39, 153);
     
 }
@@ -132,4 +134,5 @@
 .item-list-content-span{
     flex: 2;
     margin: 5px;
+    text-align: center;
 }

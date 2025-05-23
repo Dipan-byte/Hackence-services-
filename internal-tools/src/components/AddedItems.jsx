@@ -28,6 +28,27 @@ function AddedItems(){
                 setquantity("");
                 setcost("");
             }
+            else if(item && quantity){
+                window.alert('please fill cost area');
+            }
+             else if(cost && quantity){
+                window.alert('please fill item area');
+            }
+             else if(item && cost){
+                window.alert('please fill quantity area');
+            }
+            else if(item){
+                window.alert('please fill cost  and quantity');
+            }
+             else if(cost){
+                window.alert('please fill item and quantity');
+            }
+             else if(quantity){
+                window.alert('please fill item and cost');
+            }
+            else{
+                window.alert('please fill all the areas');
+            }
         }
 
 
@@ -48,15 +69,22 @@ function AddedItems(){
                             <input type='number' className='item-list-input' placeholder='ENTER COST' value={cost}  onChange={handlecost} />
                             <button className='button-add-item' onClick={handlesetitemdetail}>ADD ITEM &#8594;</button>
                         </div>
-                <div className='item-list-content-2'>
+                <div className='item-list-row'>
                         <span className='item-list-content-item'>ITME</span>
                         <span className='item-list-content-span'>QUANTITY</span>
                         <span className='item-list-content-span'>COST</span>
                         <span className='item-list-content-span'>TOTAL</span>
                         </div>        
                 <div className='item-list-content-detail'>
-
-                    </div>       
+                        { itemdetail.map((item,index) =>
+                            <div key={index} className='item-list-row'>
+                                    <span className='item-list-content-item'>{item.newitem}</span>
+                                    <span className='item-list-content-span' id='item-span-1'>{item.newquantity}</span>
+                                    <span className='item-list-content-span' id='item-span-2'>{item.newcost}</span>
+                                    <span className='item-list-content-span' id='item-span-3'>{item.newtotal}</span>
+                            </div>
+                        ) }
+                    </div>      
             </div>
         </div>
     );

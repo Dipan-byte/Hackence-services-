@@ -118,3 +118,18 @@
     height: 30px;
     font-size: 15px;
 }
+.item-list-content-2{
+    display: flex;
+    font-family: Arial,  sans-serif;
+    font-weight: bold;
+    color: rgb(92, 39, 153);
+    
+}
+.item-list-content-item{
+    flex: 6;
+    margin: 5px;
+}
+.item-list-content-span{
+    flex: 2;
+    margin: 5px;
+}

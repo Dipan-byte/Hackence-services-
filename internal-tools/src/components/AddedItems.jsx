@@ -13,6 +13,24 @@ function AddedItems(){
             setcost(e.target.value);
     
         }
+        const [itemdetail,setitemdetail]=useState([]);
+        function handlesetitemdetail(){
+            if(item && quantity && cost){
+                const itemobject = {
+                    newitem : item ,
+                    newquantity : quantity ,
+                    newcost : cost ,
+                    newtotal : cost*quantity ,
+
+                }
+                setitemdetail([...itemdetail, itemobject]);
+                setitem("");
+                setquantity("");
+                setcost("");
+            }
+        }
+
+
     return(
         <div className="item-list-container">
             <div className="item-list-title">
@@ -28,14 +46,17 @@ function AddedItems(){
                      
                             <label className='item-list-label' >COST:</label> 
                             <input type='number' className='item-list-input' placeholder='ENTER COST' value={cost}  onChange={handlecost} />
-                            <button className='button-add-item'>ADD ITEM &#8594;</button>
+                            <button className='button-add-item' onClick={handlesetitemdetail}>ADD ITEM &#8594;</button>
                         </div>
                 <div className='item-list-content-2'>
-                        
-                        
-                        
+                        <span className='item-list-content-item'>ITME</span>
+                        <span className='item-list-content-span'>QUANTITY</span>
+                        <span className='item-list-content-span'>COST</span>
+                        <span className='item-list-content-span'>TOTAL</span>
                         </div>        
-                        
+                <div className='item-list-content-detail'>
+
+                    </div>       
             </div>
         </div>
     );

@@ -1,6 +1,14 @@
 
 import React,{useState} from 'react'
-function Invoiceform({onBackClick}){
+import { useNavigate } from 'react-router-dom';
+function Invoiceform(){
+    const navigate = useNavigate()
+    function handleBackClick(){
+        navigate("/")
+    }
+    function handlecontinuebutton(){
+        navigate("/addeditems")
+    }
     const today= new Date().toISOString().split("T")[0];
     const [ date , setdate ] = useState(today)
     function handleDate(e){
@@ -73,8 +81,8 @@ function Invoiceform({onBackClick}){
             </div>
             <div className='form-button-container'>
                 
-                <button onClick={onBackClick}>BACK &#8617;</button>
-                <button>SUBMIT</button>
+                <button onClick={handleBackClick}>BACK &#8617;</button>
+                <button onClick={handlecontinuebutton}>Continue</button>
                 
             </div>
         </div>

@@ -64,16 +64,20 @@ function AddedItems(){
                 <p>ITEMS ADDED</p>
             </div>
             <div className="item-list-content">
-                <div className='item-list-content-1'>
-                            <label className='item-list-label'>ITEM: </label> 
-                            <input className='item-list-input' type='text' placeholder='ENTER ITEM' value={item}  onChange={handleitem} />
-                
-                            <label className='item-list-label'>QUANTITY:</label> 
-                            <input type='number' className='item-list-input' placeholder='ENTER QUANTITY' value={quantity}  onChange={handlequantity} />
-                     
-                            <label className='item-list-label' >COST:</label> 
-                            <input type='number' className='item-list-input' placeholder='ENTER COST' value={cost}  onChange={handlecost} />
-                            <button className='button-add-item' onClick={handlesetitemdetail}>ADD ITEM &#8594;</button>
+                <div className='item-list-content-input'>
+                           <div className='item-list-content-input-box'>
+                                <label className='item-list-label'>ITEM: </label> 
+                                <input className='item-list-input' type='text' placeholder='ENTER ITEM' value={item}  onChange={handleitem} />
+                    
+                                <label className='item-list-label'>QUANTITY:</label> 
+                                <input type='number' className='item-list-input' placeholder='ENTER QUANTITY' value={quantity}  onChange={handlequantity} />
+                        
+                                <label className='item-list-label' >COST:</label> 
+                                <input type='number' className='item-list-input' placeholder='ENTER COST' value={cost}  onChange={handlecost} />
+                            </div> 
+                            <div className='item-list-content-input-button'>
+                                <button className='button-add-item' onClick={handlesetitemdetail}>ADD ITEM &#8594;</button>
+                            </div>
                         </div>
                 <div className='item-list-row'>
                         <span className='item-list-content-item'>ITME</span>

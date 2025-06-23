@@ -41,52 +41,54 @@ function Invoiceform(){
     }
     
     return(
-    
-        <div className="form-container">
-            <div className='form-title'>
-                    <p>INVOICE FORM</p>
-            </div>
-            <div className='form-content'>
-                    <div className='form-group'>
-                        <label className='form-lable'>DATE:</label>
-                        <input className='form-input' type='date' value={date}  onChange={handleDate} />
-                    </div>
-                    <div className='form-group'>
-                        <label className='form-lable'>QUOTE NO: </label> 
-                        <input type='text' className='form-input' placeholder='ENTER QUOTE NO' value={quotenum}  onChange={handlequotenum} />
-                    </div>
-                    <div className='form-group'>
-                        <label className='form-lable'> VALID UNTIL: </label> 
-                        <input type='date' className='form-input' value={validuntil}  onChange={handlevaliduntil} />
-                    </div>
-                    
-
-                    <div className='form-group'>
-                        <label className='form-lable'>NAME OF THE INSTITUTION: </label> 
-                        <input type="text" className='form-input' placeholder='ENTER INSTITUTION NAME' value={institutionname} onChange={handleinstitutionname}/>
-                    </div>
-                    <div className='form-group'>
-                        <label className='form-lable'>NAME OF THE OWNER: </label> 
-                        <input type='text' className='form-input' placeholder='ENTER OWNER NAME' value={ownername} onChange={handleownername}/>
-                    </div>
-                    <div className='form-group' >
-                        <label className='form-lable'>CONTACT NO:</label> 
-                        <input type="text" className='form-input' placeholder='ENTER CONTACT NUMBER' value={contactnum} onChange={handlecontactnum} />
-                    </div>
+        <div className='form-body'>
+            <div className="form-container">
+                <div className='form-title'>
+                        <p>INVOICE FORM</p>
+                </div>
+                <div className='form-content'>
                         <div className='form-group'>
-                            <label className='form-lable'>ADDRESS:</label> 
-                            <input type="textarea" className='form-input' placeholder='ENTER ADDRESS' value={address} onChange={handleaddress} />
-                        </div>               
+                            <label className='form-lable'>DATE:</label>
+                            <input className='form-input' type='date' value={date}  onChange={handleDate} />
+                        </div>
+                        <div className='form-group'>
+                            <label className='form-lable'>QUOTE NO: </label> 
+                            <input type='text' className='form-input' placeholder='ENTER QUOTE NO' value={quotenum}  onChange={handlequotenum} />
+                        </div>
+                        <div className='form-group'>
+                            <label className='form-lable'> VALID UNTIL: </label> 
+                            <input type='date' className='form-input' value={validuntil}  onChange={handlevaliduntil} />
+                        </div>
+                        
+
+                        <div className='form-group'>
+                            <label className='form-lable'>NAME OF THE INSTITUTION: </label> 
+                            <input type="text" className='form-input' placeholder='ENTER INSTITUTION NAME' value={institutionname} onChange={handleinstitutionname}/>
+                        </div>
+                        <div className='form-group'>
+                            <label className='form-lable'>NAME OF THE OWNER: </label> 
+                            <input type='text' className='form-input' placeholder='ENTER OWNER NAME' value={ownername} onChange={handleownername}/>
+                        </div>
+                        <div className='form-group' >
+                            <label className='form-lable'>CONTACT NO:</label> 
+                            <input type="text" className='form-input' placeholder='ENTER CONTACT NUMBER' value={contactnum} onChange={handlecontactnum} />
+                        </div>
+                            <div className='form-group'>
+                                <label className='form-lable'>ADDRESS:</label> 
+                                <input type="textarea" className='form-input' placeholder='ENTER ADDRESS' value={address} onChange={handleaddress} />
+                            </div>               
+                        
+                </div>
+                <div className='form-button-container'>
                     
+                    <button onClick={handleBackClick}>BACK &#8617;</button>
+                    <button onClick={handlecontinuebutton}>Continue</button>
+                    
+                </div>
             </div>
-            <div className='form-button-container'>
-                
-                <button onClick={handleBackClick}>BACK &#8617;</button>
-                <button onClick={handlecontinuebutton}>Continue</button>
-                
-            </div>
-        </div>
         
+
+        </div>
     );
 }
 export default Invoiceform ;

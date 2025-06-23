@@ -58,7 +58,8 @@ function AddedItems(){
 
 
     return(
-        <div className="item-list-container">
+        <div className='list-item-body'>
+            <div className="item-list-container">
             <div className="item-list-title">
                 <p>ITEMS ADDED</p>
             </div>
@@ -92,6 +93,8 @@ function AddedItems(){
                         ) }
                     </div>      
             </div>
+        </div>
+
         </div>
     );
 }

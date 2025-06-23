@@ -1,0 +1,67 @@
+.form-body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.form-container{
+    
+    width: 90%;
+    border: 1px solid black;
+}
+.form-title{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.form-group{
+   border: 1px solid black; 
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 5px ;
+   margin-bottom: 5px ;
+}
+.form-lable{
+    display: block;
+    border: 1px solid black; 
+    margin-top: 5px ;
+    margin-bottom: 5px ;
+}
+.form-input{
+    display: block ; 
+    border: 1px solid black; 
+    margin-top: 5px ;
+    margin-bottom: 5px ;
+}
+.form-button-container{
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px ;
+    margin-bottom: 5px ;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/* item adding page */
+.list-item-body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-list-container{
+    border: 1px solid black;
+    width: 90%;
+}
+.item-list-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}

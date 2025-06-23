@@ -1,4 +1,5 @@
 import './Home.css'
+import "./pages.css"
 import AddedItems from './AddedItems.jsx'
 import InvoiceCard from '../components/InvoiceCard.jsx'
 import Invoiceform from './Invoiceform.jsx'

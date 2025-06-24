@@ -91,4 +91,21 @@
     margin: 2px;
 
 }
+.pdf-body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pdf-container{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.pdf-download-button{
+    display: flex;
+    justify-content: center;
 
+    align-items: center;
+}

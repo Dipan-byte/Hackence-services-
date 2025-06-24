@@ -1,5 +1,21 @@
-import React,{useState} from 'react';
+import React,{useState , useEffect} from 'react';
+import {useInvoiceData}  from '../components/InvoiceContext.jsx'
+import { InvoiceTable } from '../components/invoiceTable.jsx';
+import { useNavigate } from 'react-router-dom';
 function AddedItems(){
+       const { setitemList } = useInvoiceData()
+       const navigate = useNavigate()
+       const handlebacktoinvoiceformbutton =()=>{
+        return(
+            navigate('/invoiceform')
+        )
+       }
+       const  handlesubmit = () => {
+        return (
+            navigate('/downloadpage')
+        )
+       }
+       
      const [ item , setitem ] = useState("")
         function handleitem(e){
                 setitem(e.target.value);
@@ -50,6 +66,9 @@ function AddedItems(){
                 window.alert('please fill all the areas');
             }
         }
+        useEffect(() => { setitemList(itemdetail)} , 
+                        [itemdetail]
+       )
         // function handleremoveitem(index){
         //     itemdetail.filter((item,index)=>{
         //         item[i]==!index
@@ -79,23 +98,15 @@ function AddedItems(){
                                 <button className='button-add-item' onClick={handlesetitemdetail}>ADD ITEM &#8594;</button>
                             </div>
                         </div>
-                <div className='item-list-row'>
-                        <span className='item-list-content-item'>ITME</span>
-                        <span className='item-list-content-span'>QUANTITY</span>
-                        <span className='item-list-content-span'>COST</span>
-                        <span className='item-list-content-span'>TOTAL</span>
-                        </div>        
-                <div className='item-list-content-detail'>
-                        { itemdetail.map((item,index) =>
-                            <div key={index} className='item-list-row'>
-                                    <span className='item-list-content-item'>{item.newitem}</span>
-                                    <span className='item-list-content-span' id='item-span-1'>{item.newquantity}</span>
-                                    <span className='item-list-content-span' id='item-span-2'>{item.newcost}</span>
-                                    <span className='item-list-content-span' id='item-span-3'>{item.newtotal}</span>
-                                    {/* <button className='button-remove-item' onClick={handleremoveitem(key)}>REMOVE</button>; */}
-                            </div>
-                        ) }
-                    </div>      
+ 
+                    <div>
+                        <InvoiceTable/>
+                    </div>
+                    <div>
+                        <button onClick={handlebacktoinvoiceformbutton}>BACK</button>
+                        <button onClick={handlesubmit}>SUBMIT</button>
+                    </div>
+
             </div>
         </div>
 

@@ -57,7 +57,7 @@
 }
 .item-list-container{
     border: 1px solid black;
-    width: 90%;
+    width: 92%;
 }
 .item-list-title{
     display: flex;
@@ -91,3 +91,4 @@
     margin: 2px;
 
 }
+

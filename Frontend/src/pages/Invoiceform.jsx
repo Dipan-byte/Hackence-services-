@@ -1,14 +1,31 @@
 
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useInvoiceData} from '../components/InvoiceContext.jsx'
 function Invoiceform(){
     const navigate = useNavigate()
+    const {setformData } = useInvoiceData()
     function handleBackClick(){
         navigate("/")
     }
     function handlecontinuebutton(){
-        navigate("/addeditems")
+        
+        if( date && quotenum && validuntil && institutionname && ownername && contactnum && address){
+            const value ={
+                newdate : date ,
+                newquotenum : quotenum ,
+                newvaliduntil : validuntil ,
+                newinstitutionname : institutionname ,
+                newOwnername : ownername ,
+                newcontactnum : contactnum ,
+                newaddress : address , 
+            }
+            setformData(value)
+            navigate("/addeditems")
+        }
+
     }
+
     const today= new Date().toISOString().split("T")[0];
     const [ date , setdate ] = useState(today)
     function handleDate(e){
@@ -31,7 +48,7 @@ function Invoiceform(){
     function handleownername(e){
         setownername(e.target.value);
     }
-    const [contactnum , setcontactnum]=useState();
+    const [contactnum , setcontactnum]=useState("");
     function handlecontactnum(e){
         setcontactnum(e.target.value);
     }
@@ -71,18 +88,18 @@ function Invoiceform(){
                         </div>
                         <div className='form-group' >
                             <label className='form-lable'>CONTACT NO:</label> 
-                            <input type="text" className='form-input' placeholder='ENTER CONTACT NUMBER' value={contactnum} onChange={handlecontactnum} />
+                            <input type="number" className='form-input' placeholder='ENTER CONTACT NUMBER' value={contactnum} onChange={handlecontactnum} />
                         </div>
                             <div className='form-group'>
                                 <label className='form-lable'>ADDRESS:</label> 
-                                <input type="textarea" className='form-input' placeholder='ENTER ADDRESS' value={address} onChange={handleaddress} />
+                                <input type= "text" className='form-input' placeholder='ENTER ADDRESS' value={address} onChange={handleaddress} />
                             </div>               
                         
                 </div>
                 <div className='form-button-container'>
                     
                     <button onClick={handleBackClick}>BACK &#8617;</button>
-                    <button onClick={handlecontinuebutton}>Continue</button>
+                    <button onClick={handlecontinuebutton}>CONTINUE</button>
                     
                 </div>
             </div>

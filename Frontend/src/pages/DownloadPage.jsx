@@ -1,8 +1,13 @@
 import { useInvoiceData } from "../components/InvoiceContext.jsx"
-import {PDFViewer , PDFDownloadLink} from '@react-pdf/renderer'
+import {PDFViewer , PDFDownloadLink , pdf} from '@react-pdf/renderer'
 import { DownloadPagePdf } from "../components/DownloadPagePdf.jsx"
+import {saveAs } from 'file-saver'
 function DownloadPage() {
     const {itemList , formData} = useInvoiceData() 
+    // const handleDownload = async() =>{
+    //     const blob = await pdf(<DownloadPagePdf formData={formData} itemList={itemList} />).toBlob();
+    //        saveAs(blob, 'invoice.pdf');
+    // }
     return(
         <div className="pdf-body">
             <div className="pdf-container">
@@ -17,8 +22,13 @@ function DownloadPage() {
                     {
                         ({loading}) => loading ? (<button disabled>Generating.....</button>) : (<button> DOWNLOAD PDF </button>)
                     }
+
                 </PDFDownloadLink>
+                {/* <button onClick={handleDownload}>
+                        DOWNLOAD PDF
+                </button> */}
              </div>
+
 
             </div>
 
